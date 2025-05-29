@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Explorer - Your Travel Partner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay"></div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Wanderlust Explorer</h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="1.mp4" type="video/mp4">
+            <!-- Fallback background if video doesn't load -->
+            <div class="hero-fallback"></div>
+        </video>
+        <div class="hero-content">
+            <h1>Experience Luxury Travel</h1>
+            <p>Discover the world's most exclusive destinations</p>
+            <a href="#booking" class="cta-button">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2 style="margin-top: 17px;";">Book Your Perfect Trip </h2>
+            <div class="booking-tabs">
+                <button class="booking-tab active">Flights</button>
+                <button class="booking-tab">Hotels</button>
+                <button class="booking-tab">Packages</button>
+            </div>
+            
+            <div class="booking-form">
+                <form class="booking-form-grid">
+                    <div class="form-group">
+                        <label for="from">From</label>
+                        <input type="text" id="from" placeholder="Departure City" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="to">To</label>
+                        <input type="text" id="to" placeholder="Destination City" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="departure">Departure</label>
+                        <input type="date" id="departure" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="return">Return</label>
+                        <input type="date" id="return" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passengers">Passengers</label>
+                        <select id="passengers" required>
+                            <option value="1">1 Adult</option>
+                            <option value="2">2 Adults</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adults</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="class">Class</label>
+                        <select id="class" required>
+                            <option value="economy">Economy</option>
+                            <option value="premium">Premium Economy</option>
+                            <option value="business">Business</option>
+                            <option value="first">First Class</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="cta-button">Search Flights</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Destinations -->
+    <section class="premium-destinations">
+        <div class="container">
+            <h2 style="color: aliceblue;">Exclusive Destinations</h2>
+            <div class="places-grid">
+                <div class="premium-card">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4" alt="Maldives Luxury Resort">
+                    <div class="premium-card-content">
+                        <h3>Maldives Paradise</h3>
+                        <p>Experience overwater luxury villas</p>
+                        <span class="price">From $1,200/night</span>
+                    </div>
+                </div>
+                <div class="premium-card">
+                    <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6" alt="Swiss Alps">
+                    <div class="premium-card-content">
+                        <h3>Swiss Alps Retreat</h3>
+                        <p>Luxury mountain chalets with spa</p>
+                        <span class="price">From $800/night</span>
+                    </div>
+                </div>
+                <div class="premium-card">
+                    <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9" alt="Santorini Sunset">
+                    <div class="premium-card-content">
+                        <h3>Santorini Escape</h3>
+                        <p>Private villas with sea views</p>
+                        <span class="price">From $900/night</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Hotels -->
+    <section class="luxury-hotels">
+        <div class="container">
+            <h2>Featured Luxury Hotels</h2>
+            <div class="places-grid">
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="Burj Al Arab">
+                        <div class="hotel-rating">
+                            <i class="fas fa-star"></i> 5.0
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>Burj Al Arab</h3>
+                        <p class="location">Dubai, UAE</p>
+                        <p class="price">$1,500/night</p>
+                    </div>
+                </div>
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" alt="Marina Bay Sands">
+                        <div class="hotel-rating">
+                            <i class="fas fa-star"></i> 4.9
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>Marina Bay Sands</h3>
+                        <p class="location">Singapore</p>
+                        <p class="price">$800/night</p>
+                    </div>
+                </div>
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd" alt="The Ritz Paris">
+                        <div class="hotel-rating">
+                            <i class="fas fa-star"></i> 4.8
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>The Ritz Paris</h3>
+                        <p class="location">Paris, France</p>
+                        <p class="price">$1,200/night</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Features -->
+    <section class="premium-features">
+        <div class="container">
+            <h2 style="color: aliceblue;">Why Choose Us</h2>
+            <div class="highlights-grid">
+                <div class="feature-card">
+                  <i class="fa-solid fa-bell-concierge"></i>
+                    <h3>24/7 Concierge</h3>
+                    <p>Personalized service available round the clock</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Premium Security</h3>
+                    <p>Your safety and comfort are our priority</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-glass-cheers"></i>
+                    <h3>VIP Experiences</h3>
+                    <p>Exclusive access to premium events and venues</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-plane-departure"></i>
+                    <h3>Private Jets</h3>
+                    <p>Luxury air travel for discerning travelers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PACKAGES SECTION ===== -->
+    <section class="destination-packages" id="packages">
+        <div class="container">
+            <h2>World Destination Packages</h2>
+            <p class="text-center mb-xl">Discover our carefully curated travel packages to the world's most amazing destinations</p>
+            
+            <!-- Package Search -->
+            <div class="package-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search destinations...">
+            </div>
+            
+            <!-- Package Filters -->
+            <div class="package-filters">
+                <button class="filter-button active">All Destinations</button>
+                <button class="filter-button">Asia</button>
+                <button class="filter-button">Europe</button>
+                <button class="filter-button">Americas</button>
+                <button class="filter-button">Africa</button>
+                <button class="filter-button">Oceania</button>
+            </div>
+            
+            <!-- Package Grid -->
+            <div class="package-grid">
+                <!-- Bali Package -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4" alt="Bali">
+                        <div class="package-badge">Popular</div>
+                    </div>
+                    <div class="package-content">
+                        <h3>Bali Paradise</h3>
+                        <div class="package-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bali, Indonesia</span>
+                        </div>
+                        <div class="package-description">
+                            <p>Experience the perfect blend of luxury and culture in Bali. Stay at a 5-star beachfront resort, enjoy private yoga sessions, and explore ancient temples.</p>
+                        </div>
+                        <div class="package-features">
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>7 Days / 6 Nights</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-star"></i>
+                                <span>5-Star Hotel</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-utensils"></i>
+                                <span>All Meals Included</span>
+                            </div>
+                        </div>
+                        <div class="package-price">
+                            <span class="price-tag">$1,499</span>
+                            <span class="per-person">per person</span>
+                        </div>
+                        <button class="package-button">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Paris Package -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+                        <div class="package-badge">Best Seller</div>
+                    </div>
+                    <div class="package-content">
+                        <h3>Paris Romance</h3>
+                        <div class="package-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Paris, France</span>
+                        </div>
+                        <div class="package-description">
+                            <p>Fall in love with the City of Light. Enjoy a private Eiffel Tower dinner, luxury shopping on Champs-Élysées, and a Seine River cruise.</p>
+                        </div>
+                        <div class="package-features">
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>5 Days / 4 Nights</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-star"></i>
+                                <span>4-Star Boutique Hotel</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-utensils"></i>
+                                <span>Breakfast Included</span>
+                            </div>
+                        </div>
+                        <div class="package-price">
+                            <span class="price-tag">$1,299</span>
+                            <span class="per-person">per person</span>
+                        </div>
+                        <button class="package-button">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Tokyo Package -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf" alt="Tokyo">
+                        <div class="package-badge">New</div>
+                    </div>
+                    <div class="package-content">
+                        <h3>Tokyo Explorer</h3>
+                        <div class="package-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tokyo, Japan</span>
+                        </div>
+                        <div class="package-description">
+                            <p>Discover the perfect blend of tradition and innovation. Experience a private tea ceremony, sushi-making class, and guided tour of ancient temples.</p>
+                        </div>
+                        <div class="package-features">
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>6 Days / 5 Nights</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-star"></i>
+                                <span>5-Star Hotel</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-utensils"></i>
+                                <span>Daily Breakfast</span>
+                            </div>
+                        </div>
+                        <div class="package-price">
+                            <span class="price-tag">$1,799</span>
+                            <span class="per-person">per person</span>
+                        </div>
+                        <button class="package-button">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations Section -->
+    <section id="destinations" class="popular-places">
+        <div class="container">
+            <h2>Popular Destinations</h2>
+            <div class="places-grid">
+                <div class="place-card">
+                    <img src="1.png" alt="Switzerland">
+                    <h3>Switzerland</h3>
+                    <p>Perfect for couples and families with stunning alpine views</p>
+                    <div class="package-types">
+                        <span>Couple Package</span>
+                        <span>Family Package</span>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReR9Uns1_rIDNosFY9z7YaB9lGyzOpfd8MXQ&s" alt="Maldives">
+                    <h3>Maldives</h3>
+                    <p>Luxury beach getaways with overwater villas</p>
+                    <div class="package-types">
+                        <span>Couple Package</span>
+                        <span>Honeymoon Special</span>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <img src="https://www.travoticholidays.com/wp-content/uploads/2025/05/thailand-visitor-guide-things-to-do-4406.jpg" alt="Thailand">
+                    <h3>Thailand</h3>
+                    <p>Cultural experiences and beach adventures</p>
+                    <div class="package-types">
+                        <span>Family Package</span>
+                        <span>Group Tour</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Features Section -->
+    <section class="travel-info">
+        <div class="container">
+            <h2>What's Included in Our Packages</h2>
+            <div class="travel-modes">
+                <div class="travel-mode">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Accommodation</h3>
+                    <p>Carefully selected hotels and resorts</p>
+                </div>
+                <div class="travel-mode">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Meals</h3>
+                    <p>Daily breakfast and special dining experiences</p>
+                </div>
+                <div class="travel-mode">
+                    <i class="fas fa-car"></i>
+                    <h3>Transportation</h3>
+                    <p>Comfortable transfers and sightseeing</p>
+                </div>
+                <div class="travel-mode">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Expert Guide</h3>
+                    <p>Professional tour guides for your journey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Happy Travelers</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Amazing family package! Everything was perfectly organized."</p>
+                    <cite>- The Sharma Family</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Our honeymoon package was beyond expectations!"</p>
+                    <cite>- Rahul & Priya</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Plan Your Trip</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <select id="package-type" name="package-type" required>
+                        <option value="">Select Package Type</option>
+                        <option value="couple">Couple Package</option>
+                        <option value="family">Family Package</option>
+                        <option value="group">Group Tour</option>
+                        <option value="adventure">Adventure Package</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Tell us about your travel plans" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Get Package Details</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Wanderlust Explorer</h3>
+                    <p>Your trusted travel partner for memorable experiences</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wanderlust Explorer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add JavaScript before closing body tag -->
+   
+</body>
+</html>
